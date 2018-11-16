@@ -1,0 +1,10 @@
+body.ar {
+    direction: rtl;
+    ul.TheNavigation__list {
+        text-align: left;
+        margin-right: 1em;
+    }
+    span.TheNavigation__lang-item {
+        margin-right: 5px;
+    }
+}

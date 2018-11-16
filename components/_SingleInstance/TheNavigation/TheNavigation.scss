@@ -1,0 +1,97 @@
+@import '../../../assets/css/global';
+$c: 'TheNavigation';
+
+$c-the-navigation-sub-list-spacing: 1em;
+
+.#{$c} {
+  &__list {
+    @include mq($to: medium) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: $s-color-white;
+
+      &.is-open {
+        display: grid;
+      }
+    }
+  }
+
+  &__item {
+    @include font-style-base;
+    display: inline-block;
+    text-align: center;
+
+    @include mq($from: medium) {
+      text-align: left;
+
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+
+    &--has-children {
+      position: relative;
+    }
+
+    &--child {
+      display: block;
+      margin: 0 0 $c-the-navigation-sub-list-spacing;
+      white-space: nowrap;
+
+      @include mq($from: medium) {
+        margin-bottom: $c-the-navigation-sub-list-spacing;
+      }
+    }
+
+    // todo we should be able to access the sub-list by tab (a11-y)
+    &:hover {
+      .#{$c}__sub-list {
+        visibility: visible;
+      }
+    }
+
+    a {
+      @include hocus-focus($type: textcolor, $color: $s-color-primary);
+    }
+  }
+
+  &__sub-list {
+    padding-top: $c-the-navigation-sub-list-spacing;
+    visibility: visible;
+
+    @include mq($from: medium) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__link {
+    &.is-active-exact {
+      color: $s-color-primary;
+    }
+
+    &:not(.is-exact) {
+      &.is-active {
+        color: $s-color-primary;
+      }
+    }
+  }
+
+  &__lang-item {
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      &::after {
+        content: ' / ';
+      }
+    }
+  }
+}

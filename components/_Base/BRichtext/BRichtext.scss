@@ -1,0 +1,9 @@
+@import '../../../assets/css/global';
+
+$c: 'BRichtext';
+
+.#{$c} {
+  p {
+    margin-bottom: 1em;
+  }
+}

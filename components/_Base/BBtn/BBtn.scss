@@ -1,0 +1,64 @@
+@import '../../../assets/css/global';
+
+$c: 'BBtn';
+$c-b-btn-padding-vertical: 0.5em;
+$c-b-btn-padding-horizontal: 1em;
+$c-b-btn-border-radius: 4px;
+$c-b-btn-color: $s-color-primary;
+$c-b-btn-color-text: $s-color-text-default;
+$c-b-btn-color-text-inverted: $s-color-white;
+
+.#{$c} {
+  @include hocus-focus($type: textcolor, $color: $c-b-btn-color);
+  @include reset-button;
+  @include font-style-base;
+  display: inline-block;
+  color: $c-b-btn-color-text;
+  width: auto;
+  max-width: 100%;
+  transition: background-color $s-animation-duration-default $s-animation-easing-deafult, color $s-animation-duration-default $s-animation-easing-deafult;
+
+  &.is-disabled {
+    cursor: not-allowed;
+    color: lighten(grayscale($c-b-btn-color-text), 75%);
+
+    &:hover {
+      color: lighten(grayscale($c-b-btn-color-text), 75%);
+    }
+  }
+
+  // A default button is a button that is not naked
+  &:not(.is-naked) {
+    text-align: center;
+    padding: $c-b-btn-padding-vertical $c-b-btn-padding-horizontal;
+    color: $c-b-btn-color-text-inverted;
+    text-decoration: none;
+    background-color: $c-b-btn-color;
+    border-radius: $c-b-btn-border-radius;
+    margin: 0 0 px-to-rem($s-size-spacer-small);
+
+    &:hover {
+      color: $c-b-btn-color-text-inverted;
+      background: darken($c-b-btn-color, 10%);
+    }
+
+    & a {
+      color: $c-b-btn-color-text-inverted;
+
+      &:hover {
+        color: $c-b-btn-color-text-inverted;
+      }
+    }
+
+    &.is-disabled,
+    &:disabled {
+      color: lighten(grayscale($c-b-btn-color-text-inverted), 50%);
+      background-color: lighten(grayscale($c-b-btn-color), 20%);
+
+      &:hover {
+        color: lighten(grayscale($c-b-btn-color-text-inverted), 50%);
+        background-color: lighten(grayscale($c-b-btn-color), 20%);
+      }
+    }
+  }
+}

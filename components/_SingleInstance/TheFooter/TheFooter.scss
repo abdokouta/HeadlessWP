@@ -1,0 +1,14 @@
+@import '../../../assets/css/global';
+
+$c: 'TheFooter';
+
+// sass-lint:disable nesting-depth
+.#{$c} {
+  .Cookie {
+    &__buttons {
+      .BBtn {
+        margin: 0.5em;
+      }
+    }
+  }
+}

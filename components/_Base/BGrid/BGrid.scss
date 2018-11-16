@@ -1,0 +1,52 @@
+@import '../../../assets/css/global';
+
+$c: 'BGrid';
+$c-b-grid-gutter-small: $s-size-gutter-small;
+
+.#{$c} {
+  @include grid-wrapper;
+
+  &__row {
+    line-height: 0;
+  }
+
+  &__column {
+    @include grid($columns: 1, $gutter: $c-b-grid-gutter-small);
+    width: 100%;
+    margin-bottom: px-to-rem($c-b-grid-gutter-small);
+  }
+
+  &__columns {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    &--has-2 {
+      .#{$c} {
+        &__column {
+          width: 100%;
+
+          @include mq($from: medium) {
+            @include grid($columns: 2);
+          }
+        }
+      }
+    }
+
+    &--has-3 {
+      .#{$c} {
+        &__column {
+          width: 100%;
+
+          @include mq($from: small, $to: medium) {
+            @include grid($columns: 2, $gutter: $c-b-grid-gutter-small);
+          }
+
+          @include mq($from: medium) {
+            @include grid($columns: 3);
+          }
+        }
+      }
+    }
+  }
+}

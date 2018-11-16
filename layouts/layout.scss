@@ -1,0 +1,35 @@
+@import '../assets/css/global';
+
+$c: 'Layout';
+$p: 'Page';
+
+/* NUXT default transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+.#{$c} {
+  margin: auto;
+
+  &__content {
+    padding-top: px-to-rem($s-size-spacer-small);
+
+    @include mq($from: medium) {
+      padding-top: px-to-rem($s-size-spacer-medium);
+    }
+  }
+}
+
+.#{$p} {
+  padding-bottom: px-to-rem($s-size-spacer-medium);
+
+  @include mq($from: medium) {
+    padding-bottom: px-to-rem($s-size-spacer-increased);
+  }
+}

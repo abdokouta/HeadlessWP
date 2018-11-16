@@ -1,0 +1,30 @@
+{
+    "home": {
+        "title": "نيو برس"
+    },
+    "error": {
+        "title": "عذراً 🙈",
+        "message": "Une erreur est survenue.",
+        "404": "Cette page n'existe pas.",
+        "link": "Retour à la page d'accueil"
+    },
+    "exampleContent": {
+        "title": "نص تجريي",
+        "text": "<p>محتوي تجريبي</p>"
+    },
+    "skipNavigation": {
+        "text": "Passer au contenu"
+    },
+    "pagination": {
+        "previous": "Précédent",
+        "next": "Prochain",
+        "allPosts": "Tous les articles"
+    },
+    "lang": "Arabic",
+    "cookieLaw": {
+        "DEV_getTranslationForYourLang": "https://github.com/ToX82/cookie-bar/tree/master/lang",
+        "message": "🍪 Ce site utilise des cookies pour améliorer l'expérience de navigation et fournir des fonctionnalités supplémentaires.",
+        "buttonText": "OK",
+        "buttonLinkText": "En savoir plus"
+    }
+}

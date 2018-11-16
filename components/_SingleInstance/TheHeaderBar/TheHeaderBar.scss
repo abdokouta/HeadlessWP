@@ -1,0 +1,37 @@
+@import '../../../assets/css/global';
+
+$c: 'TheHeaderBar';
+$c-the-header-bar-height: 80px;
+
+.#{$c} {
+  @include set-gutter('full-width');
+  padding: px-to-rem($s-size-gutter-small) px-to-rem($s-size-gutter-small) 0;
+  display: flex;
+  height: px-to-rem($c-the-header-bar-height);
+
+  @include mq($from: medium) {
+    padding:  px-to-rem($s-size-gutter-medium);
+  }
+
+  &__item {
+    @include mq($from: medium) {
+      align-self: center;
+    }
+
+    &:first-child {
+      flex: 0 1 10%;
+    }
+
+    &:last-child {
+      text-align: right;
+      flex: 0 1 90%;
+    }
+  }
+
+  &.is-diabled {
+    * {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}

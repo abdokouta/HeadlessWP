@@ -1,0 +1,21 @@
+// Page-level styling (e.g. html and body elements).
+
+html {
+  height: 100%;
+  font-family: $s-font-family-base;
+  font-size: $s-fz-medium / 16px * 100%;
+  font-weight: normal;
+  line-height: $s-line-height-std;
+  color: $s-color-text-default;
+  background: $s-color-body-background;
+  -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+}
+
+body {
+  min-height: 100%;
+}
+
+main {
+  outline: none;
+}

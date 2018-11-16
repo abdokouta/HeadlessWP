@@ -1,0 +1,35 @@
+@import '../../../assets/css/global';
+@import '../../../node_modules/sass-burger/burger';
+
+$c: 'BBurger';
+
+$c-b-burger-padding: 10px;
+$c-b-burger-size: 40px + $c-b-burger-padding;
+$c-b-burger-border-radius: 2px;
+
+.#{$c} {
+  @include hocus-focus($type: textcolor, $color: $s-color-primary);
+  position: relative;
+  z-index: z('burger');
+  display: inline-block;
+  width: $c-b-burger-size;
+  height: $c-b-burger-size;
+  padding: $c-b-burger-padding;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+
+  @include mq($from: medium) {
+    display: none;
+  }
+
+  &__burger {
+    @include burger($width: 30px, $height: 4px, $gutter: 4px, $color: $s-color-black, $border-radius: 0, $transition-duration: $s-animation-duration-default);
+  }
+
+  &.is-active {
+    .#{$c}__burger {
+      @include burger-to-cross($color: $s-color-black);
+    }
+  }
+}

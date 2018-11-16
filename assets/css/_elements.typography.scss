@@ -1,0 +1,21 @@
+// page-level styling (e.g. html and body elements).
+
+h1 {
+  @include font-style-heading1;
+}
+
+h2 {
+  @include font-style-heading2;
+}
+
+h3 {
+  @include font-style-heading3;
+}
+
+h4 {
+  @include font-style-heading4;
+}
+
+p {
+  @include font-style-base;
+}

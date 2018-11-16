@@ -1,0 +1,25 @@
+{
+  "name": "@wearelucid/vuecid-helpers",
+  "version": "1.6.4",
+  "description": "Vuecid Utility Library",
+  "main": "dist/index.js",
+  "repository": "https://github.com/wearelucid/vuecid-helpers.git",
+  "author": "Lucid <buero@wearelucid.ch> (https://www.wearelucid.ch)",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.1.0",
+    "axios": "^0.18.0",
+    "lodash.deburr": "^4.1.0",
+    "lodash.has": "^4.5.2",
+    "lodash.kebabcase": "^4.1.1",
+    "lodash.lowercase": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/plugin-transform-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  }
+}

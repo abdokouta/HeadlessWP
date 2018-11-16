@@ -1,0 +1,21 @@
+{
+  "name": "@wearelucid/vue-bows",
+  "version": "1.1.0",
+  "description": "vue.js plugin for clear console logs",
+  "main": "dist/main.js",
+  "repository": "https://github.com/wearelucid/vue-bows.git",
+  "author": "Lucid <buero@wearelucid.ch>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.1.0",
+    "bows": "^1.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/plugin-transform-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  }
+}
